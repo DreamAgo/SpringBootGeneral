@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>值页面</title>
+</head>
+<body>
+
+<ul>
+    <li>
+        <h4>取值</h4>
+        整数型：<span style="color: red">${intVar}</span></br>
+        长整数型：<span style="color: red">${longVar}</span></br>
+        字符串型：<span style="color: red">${stringVar}</span></br>
+        双浮点型：<span style="color: red">${doubleVar}</span></br>
+        逻辑型：<span style="color: red">${booleanVar}</span></br>
+        逻辑型另一种格式化方式：<span style="color: red">${booleanVar?string('是','否')}</span></br>
+        时间日期型：<span style="color: red">${dateVar}</span></br>
+        时间日期型另一种格式化方式：<span style="color: red">${dateVar?string('yyyy-MM-dd HH:mm:ss')}</span></br></li>
+    <li>
+        <h4>赋值运算</h4>
+        a=<span style="color: red">${a}</span></br>
+        a+100=<span style="color: red">${a+100}</span></br>
+        a*100=<span style="color: red">${a*100}</span></br>
+        a/100=<span style="color: red">${a/100}</span></br>
+
+    </li>
+    <li>
+        <h4>对象</h4>
+        姓名：<span style="color: red">${user.name}</span></br>
+        年龄：<span style="color: red">${user.age}</span></br>
+
+
+    </li>
+    <li>
+        <h4>集合</h4>
+        <#list listVar as item>
+        <span style="color: red">${item}</span></br>
+        </#list>
+
+    </li>
+    <li>
+        <h4>Map</h4>
+        <#list mapVar?keys as key>
+        <span style="color: red">${key}:${mapVar[key]}</span></br>
+    </#list>
+    </li>
+    <li>
+        <h4>if&else</h4>
+        <#assign var=98/>
+        <#if var==99>
+        <span style="color: red">var=99</span></br>
+        <#elseif var &gt; 99>
+        <span style="color: red">var>99</span></br>
+        <#else>
+        <span style="color: red">var!=99&&var<99</span></br>
+        </#if>
+</li>
+    <li>
+        <h4>switch case break default</h4>
+        <#assign var=12/>
+        <#switch var>
+        <#case 10>
+        <span style="color: red">var=10</span></br>
+        <#break>
+        <#case 11>
+        <span style="color: red">var=11</span></br>
+        <#break>
+        <#default>
+        <span style="color: red">var!=10&&var!=11</span></br>
+        </#switch>
+    </li>
+</ul>
+</body>
+</html>

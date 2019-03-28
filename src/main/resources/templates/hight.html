@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高级操作</title>
+</head>
+<body>
+<ul>
+    <li>
+        <p>字符串操作</p>
+        <#assign a='hello'/>
+        <#assign b='world'/>
+        连接：<span style="color: red">${a+b}</span></br>
+        截取：<span style="color: red">${(a+b)?substring(5,8)}</span></br>
+        长度：<span style="color: red">${(a+b)?length}</span></br>
+        大写：<span style="color: red">${(a+b)?upper_case}</span></br>
+        小写：<span style="color: red">${(a+b)?lower_case}</span></br>
+        index_of：<span style="color: red">${(a+b)?index_of('w')}</span></br></li>
+        last_index_of：<span style="color: red">${(a+b)?last_index_of('l')}</span></br></li>
+        replace：<span style="color: red">${(a+b)?replace('w','o')}</span></br>
+    </li>
+
+
+        <p>自定义函数</p>
+        <#assign listVar=[1,5,7,4,3,9,8,10]/>
+        <#assign b='world'/>
+        <p>未排序</p>
+        <#list listVar as item>
+        ${item},
+        </#list>
+        <p>已排序</p>
+        <#list sort(listVar) as item>
+        ${item},
+        </#list>
+
+
+
+    </li>
+</ul>
+</body>
+</html>
